@@ -6,6 +6,7 @@ function Card({children, bg = "bg-gray-100"}) {
       {children}
     </div>
   )
+  
 }
 
 export default Card
