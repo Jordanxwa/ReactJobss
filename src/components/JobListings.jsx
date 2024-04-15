@@ -2,6 +2,8 @@ import jobs from '../jobs.json'
 import JobListing from './JobListing'
 
 function JobListings() {
+  // Only get the first 3 jobs from the array
+  const recentJobs = jobs.slice(0,3)
 
   return (
     <section className="bg-blue-50 px-4 py-10">
@@ -10,7 +12,8 @@ function JobListings() {
         Browse Jobs
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {jobs.map((job) => (
+        {/* Loop through job listing data and replace html with json data */}
+        {recentJobs.map((job) => (
           <JobListing key={job.id} job={job}/>
         ))}
       </div>
