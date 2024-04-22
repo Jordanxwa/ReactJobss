@@ -8,9 +8,11 @@ const [loading, setLoading] = useState(true)
 
 // Fetching jobs from API instead of json file when page loads
 useEffect(() => {
+  // Show 3 jobs on home page, all jobs on jobs page
+  const apiUrl = isHome ? '/api/jobs?_limit=3' : '/api/jobs' 
   const fetchJobs = async() => {
     try {
-      const res = await fetch('http://localhost:8000/jobs')
+      const res = await fetch(apiUrl)
       const data = await res.json()
       setJobs(data)
     } catch (error) {
