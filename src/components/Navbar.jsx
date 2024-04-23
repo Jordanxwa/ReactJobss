@@ -21,8 +21,7 @@ const linkClass = ({isActive}) => isActive ? 'bg-black text-white hover:bg-gray-
                 alt="React Jobs"
               />
               <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                >React Jobs</span
-              >
+                >React Jobs</span>
             </NavLink>
             <div className="md:ml-auto">
               <div className="flex space-x-2">
